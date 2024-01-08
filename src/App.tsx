@@ -14,7 +14,7 @@ function App() {
       <Router>
         <Header />
         <Routes>
-          <Route path="/" element={<Layout />}>
+          <Route path={import.meta.env.BASE_UR} element={<Layout />}>
             <Route index element={<Hjem />} />
             <Route path="/om-meg" element={<OmMeg />} />
             <Route path="/tjenester/*" element={<Tjenester />} />
