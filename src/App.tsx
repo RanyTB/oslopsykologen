@@ -7,6 +7,7 @@ import Hjem from "./pages/Hjem";
 import Footer from "./components/Footer";
 import Layout from "./Layout";
 import "./App.css";
+import texts from "./cms";
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
             <Route path="/om-meg" element={<OmMeg />} />
             <Route path="/tjenester/*" element={<Tjenester />} />
             <Route path="/priser" element={<Priser />} />
-            <Route path="*" element={<div>Not found</div>} />
+            <Route path="*" element={<div>{texts.common.pageNotFound}</div>} />
           </Route>
         </Routes>
         <Footer />

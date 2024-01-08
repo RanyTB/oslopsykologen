@@ -1,20 +1,22 @@
 import Page from "../../components/Page";
-import tjenester from "../../cms/tjenester.json";
-import TjenesteCard from "../../components/TjenesteCard/TjenesteCard";
+import texts from "../../cms";
+import TjenesteCard from "./TjenesteCard/TjenesteCard";
 import styled from "styled-components";
 
 const TjenesterPage = () => {
   return (
     <Page title="Tjenester">
       <Container>
-        {tjenester.map(({ link, shortDescription, title }) => (
-          <TjenesteCard
-            title={title}
-            description={shortDescription}
-            linkTo={link}
-            linkSuffix={title.toLowerCase()}
-          />
-        ))}
+        {texts.tjenester.tjenester.map(
+          ({ link, shortDescription, title, linkText }) => (
+            <TjenesteCard
+              title={title}
+              description={shortDescription}
+              linkTo={link}
+              linkText={linkText}
+            />
+          )
+        )}
       </Container>
     </Page>
   );

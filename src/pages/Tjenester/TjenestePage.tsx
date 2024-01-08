@@ -1,19 +1,22 @@
 import { useParams } from "react-router-dom";
-import tjenester from "../../cms/tjenester.json";
+import texts from "../../cms";
 import Page from "../../components/Page";
+import Markdown from "react-markdown";
 
 const TjenestePage = () => {
   const { tjenestetype } = useParams();
 
-  const tjeneste = tjenester.find((tjeneste) => tjeneste.link === tjenestetype);
+  const tjeneste = texts.tjenester.tjenester.find(
+    (tjeneste) => tjeneste.link === tjenestetype
+  );
 
   if (!tjeneste) {
-    return <div>Not found</div>;
+    return <div>{texts.common.pageNotFound}</div>;
   }
 
   return (
     <Page title={tjeneste.title}>
-      <p>{tjeneste.content}</p>
+      <Markdown>{tjeneste.content}</Markdown>
     </Page>
   );
 };

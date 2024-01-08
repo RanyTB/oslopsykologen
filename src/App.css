@@ -13,3 +13,18 @@
 p {
   margin: 16px 0;
 }
+
+h1 {
+
+  font-size: 56px;
+}
+
+h2 {
+  font-size: 24px
+  
+}
+
+ul {
+  list-style: disc;
+  list-style-position: inside;
+}

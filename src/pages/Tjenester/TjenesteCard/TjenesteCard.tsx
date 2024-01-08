@@ -1,23 +1,23 @@
 import styled from "styled-components";
-import { LinkButton } from "../Button";
+import { LinkButton } from "../../../components/Button";
 
 type Props = {
   title: string;
   description: string;
   linkTo: string;
-  linkSuffix: string;
+  linkText: string;
 };
 
-const TjenesteCard = ({ title, description, linkTo, linkSuffix }: Props) => {
+const TjenesteCard = ({ title, description, linkTo, linkText }: Props) => {
   return (
     <Container>
       <div>
         <Title>{title}</Title>
         <Description>{description}</Description>
       </div>
-      <LinkButton to={linkTo}>
-        Les mer{linkSuffix ? ` om ${linkSuffix}` : ""}
-      </LinkButton>
+      <div>
+        <LinkButton to={linkTo}>{linkText}</LinkButton>
+      </div>
     </Container>
   );
 };

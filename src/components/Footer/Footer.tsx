@@ -26,7 +26,7 @@ const Footer = () => {
 };
 
 const Container = styled.footer`
-  background-color: #333;
+  background-color: ${colors.background};
   color: white;
   padding: 36px;
   display: flex;
