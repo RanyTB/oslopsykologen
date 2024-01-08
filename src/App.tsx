@@ -6,7 +6,7 @@ import Priser from "./pages/Priser";
 import Hjem from "./pages/Hjem";
 import Footer from "./components/Footer";
 import Layout from "./Layout";
-import "./app.css";
+import ".App.css";
 
 function App() {
   return (
