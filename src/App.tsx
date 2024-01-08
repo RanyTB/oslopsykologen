@@ -1,5 +1,5 @@
 import Header from "./components/Header";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import OmMeg from "./pages/Om Meg";
 import Tjenester from "./pages/Tjenester";
 import Priser from "./pages/Priser";
@@ -11,7 +11,7 @@ import "./App.css";
 function App() {
   return (
     <>
-      <Router basename={import.meta.env.BASE_UR}>
+      <Router>
         <Header />
         <Routes>
           <Route path={"/"} element={<Layout />}>
