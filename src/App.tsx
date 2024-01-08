@@ -11,10 +11,10 @@ import "./App.css";
 function App() {
   return (
     <>
-      <Router>
+      <Router basename={import.meta.env.BASE_UR}>
         <Header />
         <Routes>
-          <Route path={import.meta.env.BASE_UR} element={<Layout />}>
+          <Route path={"/"} element={<Layout />}>
             <Route index element={<Hjem />} />
             <Route path="/om-meg" element={<OmMeg />} />
             <Route path="/tjenester/*" element={<Tjenester />} />
