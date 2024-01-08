@@ -15,11 +15,9 @@ const TjenesteCard = ({ title, description, linkTo, linkSuffix }: Props) => {
         <Title>{title}</Title>
         <Description>{description}</Description>
       </div>
-      <div>
-        <LinkButton to={linkTo}>
-          Les mer{linkSuffix ? ` om ${linkSuffix}` : ""}
-        </LinkButton>
-      </div>
+      <LinkButton to={linkTo}>
+        Les mer{linkSuffix ? ` om ${linkSuffix}` : ""}
+      </LinkButton>
     </Container>
   );
 };

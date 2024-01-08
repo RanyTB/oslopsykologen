@@ -13,7 +13,7 @@ const TjenestePage = () => {
 
   return (
     <Page title={tjeneste.title}>
-      <p>{tjeneste.shortDescription}</p>
+      <p>{tjeneste.content}</p>
     </Page>
   );
 };

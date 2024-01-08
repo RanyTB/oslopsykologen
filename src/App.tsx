@@ -1,4 +1,3 @@
-import "./App.css";
 import Header from "./components/Header";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import OmMeg from "./pages/Om Meg";
@@ -7,6 +6,7 @@ import Priser from "./pages/Priser";
 import Hjem from "./pages/Hjem";
 import Footer from "./components/Footer";
 import Layout from "./Layout";
+import "./app.css";
 
 function App() {
   return (

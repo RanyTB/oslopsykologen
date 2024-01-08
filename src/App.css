@@ -1,3 +1,5 @@
+@import 'reset-css';
+
 #root {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
@@ -6,4 +8,8 @@
   flex-direction: column;
   min-height: 100vh;
   line-height: 1.5;
+}
+
+p {
+  margin: 16px 0;
 }
