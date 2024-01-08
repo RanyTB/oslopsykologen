@@ -1,5 +1,7 @@
+import Page from "../../components/Page";
+
 const Priser = () => {
-  return <div>Priser og bestilling</div>;
+  return <Page title="Priser og bestilling">Info kommer</Page>;
 };
 
 export default Priser;

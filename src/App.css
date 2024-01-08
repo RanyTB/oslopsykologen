@@ -12,6 +12,7 @@
 
 p {
   margin: 16px 0;
+  max-width: 846px;
 }
 
 h1 {
@@ -21,7 +22,7 @@ h1 {
 
 h2 {
   font-size: 24px
-  
+
 }
 
 ul {

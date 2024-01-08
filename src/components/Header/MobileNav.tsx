@@ -23,40 +23,45 @@ const MobileNav = () => {
   }, []);
 
   return (
-    <Container ref={ref}>
+    <div ref={ref}>
       <Button onClick={() => setOpen(!open)}>
         <Hamburger fill="white" />
       </Button>
+
       {open && (
         <MenuContainer>
           <NavLinks onNavigate={() => setOpen(false)} />
         </MenuContainer>
       )}
-    </Container>
+    </div>
   );
 };
 
-const Container = styled.div`
-  position: relative;
-`;
-
 const MenuContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+
   background-color: ${colors.background};
   padding: 12px;
-  display: flex;
-  gap: 12px;
-  flex-direction: column;
   position: absolute;
-  top: 24px;
-  right: 0px;
+  top: 68px;
+  left: 0;
+  right: 0;
 `;
 
 const Button = styled.button`
+  display: flex;
+  padding: 0;
+  margin: 0;
+  align-items: center;
   color: white;
   border: none;
   cursor: pointer;
-  height: 24px;
-  width: 24px;
+  height: 36px;
+  width: 36px;
 
   display: none;
   background-color: transparent;

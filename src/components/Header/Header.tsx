@@ -17,6 +17,7 @@ const Header = () => {
 };
 
 const HeaderContainer = styled.header`
+  position: relative;
   background-color: ${colors.background};
   color: white;
   padding: 1rem;
