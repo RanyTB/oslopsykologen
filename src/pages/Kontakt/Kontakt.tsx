@@ -1,42 +1,21 @@
 import { useState } from "react";
 import GenerellSkjema from "./Skjema/index";
 import GruppeSkjema from "./Skjema/SkjemaGruppe";
-import SkjemaSadiya from "./Skjema/SkjemaSadiya";
-import SkjemaNadine from "./Skjema/SkjemaNadine";
 import Nav from "react-bootstrap/Nav";
 import { Section, StyledNav } from "./styled";
 
 const Kontakt = () => {
   const [gruppeTerapi, setGruppeTerapi] = useState(false);
-  const [kontaktSadiya, setKontaktSadiya] = useState(false);
-  const [kontaktNadine, setKontaktNadine] = useState(false);
   const [kontaktGenerell, setKontaktGenerell] = useState(true);
 
   const handleGruppeTerapiActive = () => {
     setGruppeTerapi(true);
-    setKontaktSadiya(false);
-    setKontaktNadine(false);
-    setKontaktGenerell(false);
-  };
-
-  const handleKontaktNadineActive = () => {
-    setGruppeTerapi(false);
-    setKontaktSadiya(false);
-    setKontaktNadine(true);
-    setKontaktGenerell(false);
-  };
-
-  const handleKontaktSadiyaActive = () => {
-    setGruppeTerapi(false);
-    setKontaktSadiya(true);
-    setKontaktNadine(false);
     setKontaktGenerell(false);
   };
 
   const handleKontaktGenerellActive = () => {
     setGruppeTerapi(false);
-    setKontaktSadiya(false);
-    setKontaktNadine(false);
+
     setKontaktGenerell(true);
   };
 
@@ -55,21 +34,9 @@ const Kontakt = () => {
               Gruppeterapi
             </Nav.Link>
           </Nav.Item>
-          <Nav.Item>
-            <Nav.Link onClick={handleKontaktSadiyaActive} eventKey="link-1">
-              Sadiya
-            </Nav.Link>
-          </Nav.Item>
-          <Nav.Item>
-            <Nav.Link onClick={handleKontaktNadineActive} eventKey="link-2">
-              Nadine
-            </Nav.Link>
-          </Nav.Item>
         </StyledNav>
         {kontaktGenerell && <GenerellSkjema />}
         {gruppeTerapi && <GruppeSkjema />}
-        {kontaktSadiya && <SkjemaSadiya />}
-        {kontaktNadine && <SkjemaNadine />}
       </Section>
     </>
   );
