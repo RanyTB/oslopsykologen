@@ -1,6 +1,12 @@
-import { useForm, Controller } from "react-hook-form";
+import {
+  useForm,
+  Controller,
+  FieldError,
+  FieldErrorsImpl,
+  Merge,
+} from "react-hook-form";
+import { useState } from "react";
 import Loader from "../../../components/Loader/Loader";
-
 import { faCircleCheck } from "@fortawesome/free-solid-svg-icons";
 import {
   FormError,
@@ -22,10 +28,12 @@ const GenerellSkjema = () => {
     control,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm();
-  const isLoading = false; // Example loading state
-  const isError = false; // Example error state
-  const isSuccess = false; // Example success state
+
+  const [isLoading, setIsLoading] = useState(false);
+  const [isError, setIsError] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
 
   const renderErrorMessage = (
     error:
@@ -40,7 +48,7 @@ const GenerellSkjema = () => {
     return null;
   };
 
-  const onSubmit = async (data) => {
+  const onSubmit = async (data: any) => {
     try {
       setIsLoading(true);
       setIsError(false);
