@@ -2,18 +2,18 @@ import styled from "styled-components";
 import { LinkButton } from "../Button";
 
 type Props = {
-  title?: string;
-  description?: string;
-  secondDescription?: string;
-  thirdDescription?: string;
-  listHeading?: string;
-  listHeading2?: string;
-  listItem1?: string;
-  listItem2?: string;
-  listItem3?: string;
-  linkTo?: string;
-  linkText?: string;
-  target?: string;
+  title: string;
+  description: string;
+  secondDescription: string;
+  thirdDescription: string;
+  listHeading: string;
+  listHeading2: string;
+  listItem1: string;
+  listItem2: string;
+  listItem3: string;
+  linkTo: string;
+  linkText: string;
+  target: string;
 };
 
 const Card = ({
