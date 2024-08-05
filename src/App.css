@@ -1,4 +1,4 @@
-@import 'reset-css';
+@import "reset-css";
 
 #root {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -16,16 +16,52 @@ p {
 }
 
 h1 {
-
   font-size: 56px;
 }
 
 h2 {
-  font-size: 24px
-
+  font-size: 24px;
 }
 
 ul {
   list-style: disc;
   list-style-position: inside;
+}
+
+.fixed-width-accordion {
+  width: 350px;
+}
+
+.fixed-width-accordion .accordion-header {
+  background-color: #d2b48c;
+  color: white;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out,
+    background-color 0.5s ease-in-out;
+
+  &:hover {
+    background-color: #c1a375;
+    transform: translateY(-2px);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.fixed-width-accordion .accordion-body {
+  background-color: #f5f5f5; /* A lighter color to differentiate from the header */
+  color: #333; /* Adjust text color if needed */
+}
+
+.fixed-width-accordion .accordion-header button {
+  background-color: #d2b48c; /* Apply the custom color to the button */
+  color: black; /* Adjust text color if needed */
+  border: none; /* Remove border if needed */
+}
+
+.fixed-width-accordion .accordion-header button:focus {
+  box-shadow: none; /* Remove focus outline if needed */
+}
+
+@media (max-width: 380px) {
+  .fixed-width-accordion {
+    width: 225px;
+  }
 }

@@ -8,6 +8,7 @@ import Footer from "./components/Footer";
 import Layout from "./Layout";
 import "./App.css";
 import texts from "./cms";
+import Kontakt from "./pages/Kontakt";
 
 function App() {
   return (
@@ -17,9 +18,10 @@ function App() {
         <Routes>
           <Route path={"/"} element={<Layout />}>
             <Route index element={<Hjem />} />
-            <Route path="/om-meg" element={<OmMeg />} />
+            <Route path="/om-oss" element={<OmMeg />} />
             <Route path="/tjenester/*" element={<Tjenester />} />
-            <Route path="/priser" element={<Priser />} />
+            <Route path="/bestill" element={<Priser />} />
+            <Route path="/kontakt" element={<Kontakt />} />
             <Route path="*" element={<div>{texts.common.pageNotFound}</div>} />
           </Route>
         </Routes>

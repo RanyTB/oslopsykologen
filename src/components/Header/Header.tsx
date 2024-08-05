@@ -2,13 +2,12 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import DesktopNav from "./DesktopNav";
 import MobileNav from "./MobileNav";
-import { colors } from "../../constants";
 
 const Header = () => {
   return (
     <HeaderContainer>
       <Content>
-        <Title to="/">Oslopsykologen</Title>
+        <Title to="/">Mangfoldpsykologene</Title>
         <DesktopNav />
         <MobileNav />
       </Content>
@@ -17,9 +16,10 @@ const Header = () => {
 };
 
 const HeaderContainer = styled.header`
+  background-color: #d2b48c;
   position: relative;
-  background-color: ${colors.background};
-  color: white;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px;
+  color: black;
   padding: 1rem;
   display: flex;
   justify-content: center;
@@ -34,7 +34,7 @@ const Content = styled.div`
 `;
 
 const Title = styled(Link)`
-  color: white;
+  color: Black;
   text-decoration: none;
   font-size: 1.5rem;
 `;

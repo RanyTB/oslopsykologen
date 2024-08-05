@@ -2,7 +2,6 @@ import styled from "styled-components";
 import Hamburger from "../../assets/hamburger.svg?react";
 import { useEffect, useRef, useState } from "react";
 import NavLinks from "./NavLinks";
-import { colors } from "../../constants";
 
 const MobileNav = () => {
   const ref = useRef<HTMLDivElement>(null);
@@ -43,8 +42,8 @@ const MenuContainer = styled.div`
   align-items: center;
   gap: 12px;
   padding: 12px;
-
-  background-color: ${colors.background};
+  z-index: 1;
+  background-color: #d2b48c;
   padding: 12px;
   position: absolute;
   top: 68px;
@@ -66,7 +65,7 @@ const Button = styled.button`
   display: none;
   background-color: transparent;
 
-  @media (max-width: 648px) {
+  @media (max-width: 834px) {
     display: flex;
     gap: 12px;
     flex-wrap: wrap;

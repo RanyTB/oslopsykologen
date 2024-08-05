@@ -1,14 +1,18 @@
-import Page from "../../components/Page";
-import texts from "../../cms";
+import styled from "styled-components";
+import Switch from "../../components/Switch/Switch";
 
 const OmMeg = () => {
   return (
-    <Page title="Psykolog Nadine Rose A. Richani">
-      {texts.omMeg.paragraphs.map((paragraph) => (
-        <p>{paragraph}</p>
-      ))}
-    </Page>
+    <>
+      <SwitchContainer>
+        <Switch />
+      </SwitchContainer>
+    </>
   );
 };
+
+const SwitchContainer = styled.div`
+  margin-top: 2rem;
+`;
 
 export default OmMeg;

@@ -11,28 +11,60 @@ const NavLinks = ({ onNavigate }: Props) => {
       <StyledNavLink to="/" onClick={onNavigate}>
         Hjem
       </StyledNavLink>
-      <StyledNavLink to="/om-meg" onClick={onNavigate}>
-        Om meg
+      <StyledNavLink to="/om-oss" onClick={onNavigate}>
+        Om oss
       </StyledNavLink>
       <StyledNavLink to="/tjenester" onClick={onNavigate}>
         Tjenester
       </StyledNavLink>
-      <StyledNavLink to="/priser" onClick={onNavigate}>
+      <StyledNavLink to="/bestill" onClick={onNavigate}>
         Bestill
+      </StyledNavLink>
+      <StyledNavLink to="/kontakt" onClick={onNavigate}>
+        Kontakt
       </StyledNavLink>
     </>
   );
 };
 
 const StyledNavLink = styled(NavLink)`
-  color: white;
+  color: black;
   text-decoration: none;
+  opacity: 0.7;
   margin: 0 1rem;
+  font-size: 1.2rem;
+  transition: color 0.3s ease-in-out, opacity 0.3s ease-in-out;
+
+  position: relative;
+
   &:hover {
-    text-decoration: underline;
+    opacity: 1;
+    color: black;
+
+    &::after {
+      width: 100%;
+    }
   }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background-color: black;
+    transition: width 0.3s ease-in-out;
+  }
+
   &.active {
-    color: #d2395c;
+    opacity: 1;
+    font-weight: bolder;
+
+    &::after {
+      width: 100%;
+    }
   }
 `;
+
 export default NavLinks;
