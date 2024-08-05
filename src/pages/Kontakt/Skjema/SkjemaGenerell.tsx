@@ -28,6 +28,7 @@ const GenerellSkjema = () => {
     control,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm();
   const [isLoading, setIsLoading] = useState(false); // Example loading state
   const [isError, setIsError] = useState(false); // Example error state
