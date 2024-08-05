@@ -11,8 +11,15 @@ const OmSadiya = () => {
         <Image src={portrett} />
         <Separator />
         <Card
+          title=""
           description="Jeg er autorisert psykolog med flere års erfaring fra spesialisthelsetjenesten. Jeg er for tiden under spesialisering i klinisk voksenpsykologi. De siste årene har jeg jobbet i poliklinikk, døgnavdeling og på psykoseenhet. Min erfaring spenner over et bredt spekter av psykiske lidelser og utfordringer, og jeg har jobbet med både voksne, unge og familier. Jeg har hatt gleden av å hjelpe pasienter fra ulike livsløp og kulturelle bakgrunner med forskjellige problemstillinger."
           secondDescription=""
+          thirdDescription=""
+          listItem1=""
+          listItem2=""
+          listItem3=""
+          listHeading=""
+          listHeading2=""
           linkTo={""}
           linkText={""}
           target=""
@@ -20,10 +27,18 @@ const OmSadiya = () => {
       </MainSection>
       <MainSection>
         <Card
+          title=""
           description="Gjennom min karriere har jeg arbeidet mye med lidelser som angst, depresjon, traumer, tilknytningsvansker, personlighetsforstyrrelser, somatisering og ADHD. Jeg har også erfaring innen flerkulturell psykologi, og er spesielt interessert i utfordringene som oppstår ved migrasjon og blant expats."
           linkTo={""}
           linkText={""}
           target=""
+          secondDescription=""
+          thirdDescription=""
+          listItem1=""
+          listItem2=""
+          listItem3=""
+          listHeading=""
+          listHeading2=""
         />
       </MainSection>
       <QuoteSection>
@@ -34,26 +49,50 @@ const OmSadiya = () => {
       </QuoteSection>
       <MainSection>
         <Card
+          title=""
           description="Jeg har bred erfaring med utredninger og er opptatt av å forstå dine symptomer på en helhetlig og respektfull måte. Som psykolog er jeg kjent for å være empatisk og lyttende. Jeg benytter en psykodynamisk tilnærming og tilpasser terapien etter dine unike behov. Jeg anvender også kognitive intervensjoner, psykoedukasjon og emosjonsfokusert terapi. Hos meg er ingen problemstillinger for små eller for store."
           linkTo={""}
           linkText={""}
           target=""
+          secondDescription=""
+          thirdDescription=""
+          listItem1=""
+          listItem2=""
+          listItem3=""
+          listHeading=""
+          listHeading2=""
         />
       </MainSection>
       <MainSection>
         <Separator />
         <Subheading>Hva kan du forvente hos meg</Subheading>
         <Card
+          title=""
           description="Jeg legger stor vekt på å etablere en sterk terapeutisk relasjon, da jeg mener dette er avgjørende for å fremme endring og vekst hos mine deg. I terapirommet skaper jeg en trygg, empatisk og ikke-dømmende atmosfære. Jeg tilbyr også EMDR-behandling ved behov."
           linkTo={""}
           linkText={""}
           target=""
+          secondDescription=""
+          thirdDescription=""
+          listItem1=""
+          listItem2=""
+          listItem3=""
+          listHeading=""
+          listHeading2=""
         />
         <Card
+          title=""
           secondDescription="For å møte dine ulike behov, tilbyr jeg terapi på kontoret, per telefon eller via video. Jeg tilbyr terapi på norsk, engelsk og somali."
           linkTo={""}
           linkText={""}
           target=""
+          description=""
+          thirdDescription=""
+          listItem1=""
+          listItem2=""
+          listItem3=""
+          listHeading=""
+          listHeading2=""
         />
       </MainSection>
     </>

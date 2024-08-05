@@ -20,23 +20,44 @@ const TjenestePage = () => {
       <MainHeading>{tjeneste.title}</MainHeading>
       <Separator />
       <Card
+        title=""
         description={tjeneste.content}
         secondDescription=""
+        thirdDescription=""
+        listItem1=""
+        listItem2=""
+        listItem3=""
+        listHeading=""
+        listHeading2=""
         linkTo={""}
         linkText={""}
         target=""
       />
       <Card
-        description={tjeneste.content2}
+        title=""
+        description={tjeneste.content2 ? tjeneste.content2 : ""}
         secondDescription=""
+        thirdDescription=""
+        listItem1=""
+        listItem2=""
+        listItem3=""
+        listHeading=""
+        listHeading2=""
         linkTo={""}
         linkText={""}
         target=""
       />
       <Separator />
       <Card
-        description={tjeneste.content3}
+        title=""
+        description={tjeneste.content3 ? tjeneste.content3 : ""}
         secondDescription=""
+        thirdDescription=""
+        listItem1=""
+        listItem2=""
+        listItem3=""
+        listHeading=""
+        listHeading2=""
         linkTo={""}
         linkText={""}
         target=""
@@ -60,7 +81,20 @@ const TjenestePage = () => {
         )}
       </ListWrapper>
 
-      <Card linkTo={"/bestill"} linkText={"Bestill time"} />
+      <Card
+        title=""
+        description=""
+        secondDescription=""
+        thirdDescription=""
+        listItem1=""
+        listItem2=""
+        listItem3=""
+        listHeading=""
+        listHeading2=""
+        linkTo={"/bestill"}
+        linkText={"Bestill time"}
+        target=""
+      />
     </MainSection>
   );
 };

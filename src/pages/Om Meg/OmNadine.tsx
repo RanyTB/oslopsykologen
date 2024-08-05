@@ -11,19 +11,34 @@ const OmNadine = () => {
         <Image src={portrett} />
         <Separator />
         <Card
+          title=""
           description="Jeg har min psykologutdanning fra Det Syddanske Universitetet i Danmark, og jeg spesialiserer meg innenfor voksenpsykologi. Jeg har flere års erfaring som psykolog. Jeg har jobbet i spesialisthelsetjenesten med både barn, unge og voksne."
           secondDescription=""
+          thirdDescription=""
+          listItem1=""
+          listItem2=""
+          listItem3=""
+          listHeading=""
+          listHeading2=""
+          target=""
           linkTo={""}
           linkText={""}
-          target=""
         />
       </MainSection>
       <MainSection>
         <Card
+          title=""
           description="Gjennom mitt arbeid som psykolog har jeg opparbeidet meg en erfaring med et mangfold av problemstillinger, og har erfaring med en rekke psykiske lidelser og utfordringer. Som angst, depresjon, relasjonelle vansker, traumer, tilknytningsvansker og mye mer. Jeg har jobbet med personer fra forskjellige kulturelle bakgrunner, og har erfaring med minoritetspsykologi."
           linkTo={""}
           linkText={""}
           target=""
+          secondDescription=""
+          thirdDescription=""
+          listItem1=""
+          listItem2=""
+          listItem3=""
+          listHeading=""
+          listHeading2=""
         />
       </MainSection>
       <QuoteSection>
@@ -34,36 +49,68 @@ const OmNadine = () => {
       </QuoteSection>
       <MainSection>
         <Card
+          title=""
           description="Jeg legger derfor stor vekt på å skape en trygg, empatisk og ikke-dømmende atmosfære i terapirommet. Jeg tar også sikte på å tilpasse behandlingen til ditt unike behov og ønsker."
           linkTo={""}
           linkText={""}
           target=""
+          secondDescription=""
+          thirdDescription=""
+          listItem1=""
+          listItem2=""
+          listItem3=""
+          listHeading=""
+          listHeading2=""
         />
       </MainSection>
       <MainSection>
         <Separator />
         <Subheading>Hva kan du forvente hos meg</Subheading>
         <Card
+          title=""
           description="Jeg har en fleksibel tilnærming til terapi. Jeg ønsker å tilpasse meg dine behov og vil samarbeide med deg for å finne en tilnærming som passer deg best. Derfor bruker jeg en integrativ tilnærming som kombinerer teknikker fra ulike terapiretninger, inkludert kognitiv terapi og emosjonsfokusert terapi."
           linkTo={""}
           linkText={""}
           target=""
+          secondDescription=""
+          thirdDescription=""
+          listItem1=""
+          listItem2=""
+          listItem3=""
+          listHeading=""
+          listHeading2=""
         />
         <Card
+          title=""
           secondDescription="Timene foregår via video, telefon eller personlig oppmøte. Jeg tilbyr terapi i følgende språk: spansk, arabisk (libanesisk), norsk og engelsk. Jeg tilbyr individualterapi og er tilgjengelig på kveldstid."
           linkTo={""}
           linkText={""}
           target=""
+          description=""
+          thirdDescription=""
+          listItem1=""
+          listItem2=""
+          listItem3=""
+          listHeading=""
+          listHeading2=""
         />
       </MainSection>
       <MainSection>
         <Separator />
         <Subheading>Tjeneste innenfor prestasjonspsykologi</Subheading>
         <Card
+          title=""
           description="Jeg tilbyr også en egen tjeneste innenfor prestasjonspsykologi, hvor jeg tilbyr coaching/terapi til artister eller andre innenfor den kreative bransjen. Se artisthry.no for mer informasjon"
           linkTo={""}
           linkText={""}
           target=""
+          secondDescription=""
+          thirdDescription=""
+          listItem1=""
+          listItem2=""
+          listItem3=""
+          listHeading=""
+          listHeading2=""
         />
       </MainSection>
     </>

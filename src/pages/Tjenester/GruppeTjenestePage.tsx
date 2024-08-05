@@ -24,29 +24,63 @@ const GruppeTjenestePage = () => {
       <MainHeading>{gruppeTjeneste.title}</MainHeading>
       <Separator />
       <Card
+        title=""
         description={gruppeTjeneste.content}
+        thirdDescription=""
         secondDescription=""
-        linkTo={""}
-        linkText={""}
+        listItem1=""
+        listItem2=""
+        listItem3=""
+        listHeading=""
+        listHeading2=""
         target=""
+        linkTo=""
+        linkText=""
       />
       <Card
+        title=""
         description={gruppeTjeneste.content2}
         secondDescription=""
-        linkTo={""}
+        thirdDescription=""
+        listItem1=""
+        listItem2=""
+        listItem3=""
+        listHeading=""
+        listHeading2=""
         linkText={""}
+        linkTo=""
         target=""
       />
       <Separator />
       <Card
+        title=""
         description={gruppeTjeneste.content3}
         secondDescription=""
-        linkTo={""}
-        linkText={""}
+        thirdDescription=""
+        listItem1=""
+        listItem2=""
+        listItem3=""
+        listHeading=""
+        listHeading2=""
         target=""
+        linkTo=""
+        linkText=""
       />
       <Separator />
-      <Card description={gruppeTjeneste.content4} />
+      <Card
+        title=""
+        description={gruppeTjeneste.content4 ? gruppeTjeneste.content4 : ""}
+        secondDescription=""
+        thirdDescription=""
+        listItem1=""
+        listItem2=""
+        listItem3=""
+        listHeading=""
+        listHeading2=""
+        target=""
+        linkTo=""
+        linkText=""
+      />
       {gruppeTjeneste.subheading ? (
         <Subheading>{gruppeTjeneste.subheading}</Subheading>
       ) : (
@@ -155,9 +189,35 @@ const GruppeTjenestePage = () => {
       </AccordionContainer>
       <Separator />
 
-      <Card description={gruppeTjeneste.infoPris} />
+      <Card
+        title=""
+        description={gruppeTjeneste.infoPris}
+        secondDescription=""
+        thirdDescription=""
+        listItem1=""
+        listItem2=""
+        listItem3=""
+        listHeading=""
+        listHeading2=""
+        target=""
+        linkTo=""
+        linkText=""
+      />
       <Separator />
-      <Card linkTo={"/kontakt"} linkText={"Bestill time"} />
+      <Card
+        title=""
+        secondDescription=""
+        thirdDescription=""
+        listItem1=""
+        listItem2=""
+        listItem3=""
+        listHeading=""
+        listHeading2=""
+        target=""
+        description={gruppeTjeneste.infoPris}
+        linkTo={"/kontakt"}
+        linkText={"Bestill time"}
+      />
     </MainSection>
   );
 };

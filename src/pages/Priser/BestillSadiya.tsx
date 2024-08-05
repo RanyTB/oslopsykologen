@@ -11,7 +11,7 @@ const BestillSadiya = () => {
         <Image src={heroImage} alt="Image of Sadiya" />
         <Separator />
         <Card
-          title="Bestill konsultasjon hos Sadiya"
+          title=""
           description="Jeg tror på å etablere en sterk terapeutisk relasjon, da jeg mener dette er avgjørende for å fremme endring og vekst hos deg."
           listHeading="Priser:"
           listItem1="Individual terapi 45 min - 1550kr"
@@ -22,8 +22,22 @@ const BestillSadiya = () => {
           linkTo={"https://www.ledigpsykolog.no/sadiya-hamsa-mahamed?"}
           linkText={"Bestill konsultasjon"}
           target="_blank"
+          secondDescription=""
         />
-        <Card linkTo={"/kontakt"} linkText={"Bestill gruppetime"} />
+        <Card
+          title=""
+          description=""
+          secondDescription=""
+          thirdDescription=""
+          listItem1=""
+          listItem2=""
+          listItem3=""
+          listHeading=""
+          listHeading2=""
+          target=""
+          linkTo={"/kontakt"}
+          linkText={"Bestill gruppetime"}
+        />
       </OrderSection>
     </MethodSection>
   );

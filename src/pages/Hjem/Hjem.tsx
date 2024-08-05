@@ -86,6 +86,7 @@ const Hjem = () => {
             listHeading2="For de som har behov for hjelp med alvorlige psykiske vansker, anbefaler vi å kontakte offentlige helsetjenester eller spesialiserte institusjoner som kan gi den nødvendige støtten og behandlingen. Hvis du er usikker på om våre tjenester passer for deg, er du velkommen til å ta kontakt med oss for en uforpliktende samtale.  "
             linkTo={"/bestill"}
             linkText={"Bestill konsultasjon "}
+            target=""
           />
         </ContentWrapper>
         <Image src={consultationImage} alt="Image of Psykolog Richani" />
