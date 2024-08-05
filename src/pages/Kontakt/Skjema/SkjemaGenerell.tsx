@@ -1,6 +1,6 @@
 import { useForm, Controller } from "react-hook-form";
 import Loader from "../../../components/Loader/Loader";
-import { useState } from "react";
+
 import { faCircleCheck } from "@fortawesome/free-solid-svg-icons";
 import {
   FormError,
@@ -18,18 +18,29 @@ import {
 } from "../styled";
 
 const GenerellSkjema = () => {
-  const [isLoading, setIsLoading] = useState(false);
-  const [isError, setIsError] = useState(false);
-  const [isSuccess, setIsSuccess] = useState(false);
-
   const {
     control,
     handleSubmit,
-    reset,
     formState: { errors },
   } = useForm();
+  const isLoading = false; // Example loading state
+  const isError = false; // Example error state
+  const isSuccess = false; // Example success state
 
-  const onSubmit = async (data: unknown) => {
+  const renderErrorMessage = (
+    error:
+      | string
+      | FieldError
+      | Merge<FieldError, FieldErrorsImpl<any>>
+      | undefined
+  ): React.ReactNode => {
+    if (!error) return null;
+    if (typeof error === "string") return error;
+    if ("message" in error && error.message) return error.message;
+    return null;
+  };
+
+  const onSubmit = async (data) => {
     try {
       setIsLoading(true);
       setIsError(false);
@@ -91,7 +102,7 @@ const GenerellSkjema = () => {
                 <FormError role="alert">
                   {errors.navn.type === "required"
                     ? "Vennligst fyll inn navnet ditt"
-                    : errors.navn.message}
+                    : renderErrorMessage(errors.navn)}
                 </FormError>
               )}
             </>
@@ -121,7 +132,7 @@ const GenerellSkjema = () => {
                 <FormError role="alert">
                   {errors.epost.type === "required"
                     ? "Vennligst fyll inn din e-post adresse"
-                    : errors.epost.message}
+                    : renderErrorMessage(errors.epost)}
                 </FormError>
               )}
             </>
@@ -152,7 +163,9 @@ const GenerellSkjema = () => {
                 placeholder="Ditt telefonnummer"
               />
               {errors["telefon"]?.message && (
-                <FormError role="alert">{errors["telefon"]?.message}</FormError>
+                <FormError role="alert">
+                  {renderErrorMessage(errors["telefon"]?.message)}
+                </FormError>
               )}
             </>
           )}
@@ -178,7 +191,9 @@ const GenerellSkjema = () => {
             <>
               <FormTextarea {...field} placeholder="Maks 1000 tegn" />
               {errors.message && (
-                <FormError role="alert">{errors.message.message}</FormError>
+                <FormError role="alert">
+                  {renderErrorMessage(errors.message)}
+                </FormError>
               )}
             </>
           )}
