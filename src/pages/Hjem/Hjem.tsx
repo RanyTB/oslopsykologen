@@ -19,12 +19,28 @@ const Hjem = () => {
             <Card
               title="Bestill time"
               description={"Ønsker du en konsultasjon?"}
+              secondDescription=""
+              thirdDescription=""
+              listItem1=""
+              listItem2=""
+              listItem3=""
+              listHeading=""
+              listHeading2=""
+              target=""
               linkTo={"/bestill"}
               linkText={"Bestill time"}
             />
             <Card
               title="Behandlinger"
               description={"Vi tilbyr terapi med ulike metoder"}
+              secondDescription=""
+              thirdDescription=""
+              listItem1=""
+              listItem2=""
+              listItem3=""
+              listHeading=""
+              listHeading2=""
+              target=""
               linkTo={"/tjenester"}
               linkText={"Utforsk behandlinger"}
             />
@@ -37,6 +53,14 @@ const Hjem = () => {
           <Card
             title="Hvem er vi?"
             description="Vi er to psykologer som brenner for psykisk helse og mangfold. Gjennom vårt arbeid er vi opptatt av å skape et trygt rom for deg, uansett bakgrunn, kjønn og identitet"
+            secondDescription=""
+            thirdDescription=""
+            listItem1=""
+            listItem2=""
+            listItem3=""
+            listHeading=""
+            listHeading2=""
+            target=""
             linkTo={"/om-oss"}
             linkText={"Om oss"}
           />
@@ -53,6 +77,8 @@ const Hjem = () => {
           <Card
             title="Bestill konsultasjon"
             description="Vi tilbyr terapi og støtte for deg som opplever mild til moderate psykiske vansker. Vårt mål er å hjelpe deg med å forbedre livskvaliteten din gjennom økt forståelse av deg selv og dine relasjoner."
+            secondDescription=""
+            thirdDescription=""
             listHeading="Vi kan dessverre ikke ta imot personer med: "
             listItem1="Alvorlige psykiske lidelser som krever intensiv behandling eller innleggelse"
             listItem2="Akutte krisesituasjoner som selvmordsfare eller alvorlige traumer "
@@ -76,24 +102,64 @@ const Hjem = () => {
             <Card
               title="EMDR-behandling"
               description="EMDR-behandling er en terapeutisk metode som hjelper med å bearbeide og frigjøre negative følelser og symptomer knyttet til traumatiske opplevelser"
+              secondDescription=""
+              thirdDescription=""
+              listItem1=""
+              listItem2=""
+              listItem3=""
+              listHeading=""
+              listHeading2=""
+              target=""
+              linkTo=""
+              linkText=""
             />
           </CardLink>
           <CardLink to={"/tjenester/kognetiv-terapi"}>
             <Card
               title="Kognitiv terapi"
               description="Kognitiv terapi er en behandlingsmetode som fokuserer på å identifisere og endre negative tankemønstre for å redusere symptomer på psykiske utfordringer som depresjon, angstlidelser, fobier, PTSD og forbedre selvfølelsen"
+              secondDescription=""
+              thirdDescription=""
+              listItem1=""
+              listItem2=""
+              listItem3=""
+              listHeading=""
+              listHeading2=""
+              target=""
+              linkTo=""
+              linkText=""
             />
           </CardLink>
           <CardLink to={"/tjenester/metakognetiv-terapi"}>
             <Card
               title="Metakognitiv terapi"
               description="Metakognitiv terapi (MCT) er en effektiv behandlingsmetode for å hjelpe deg med angst og depresjon med å redusere overtenking og symptomer"
+              secondDescription=""
+              thirdDescription=""
+              listItem1=""
+              listItem2=""
+              listItem3=""
+              listHeading=""
+              listHeading2=""
+              target=""
+              linkTo=""
+              linkText=""
             />
           </CardLink>
           <CardLink to={"/tjenester/emosjonsfokusert-terapi"}>
             <Card
               title="Emosjonsfokusert terapi"
               description="Emosjonsfokusert terapi (EFT) tar utgangspunkt i at psykiske problemer oppstår når vi mister kontakten med våre grunnleggende følelser og behov. Vi lærer gjennom livet hvordan vi skal håndtere følelser, og noen av oss kan oppleve visse følelser som vanskeligere å mestre."
+              secondDescription=""
+              thirdDescription=""
+              listItem1=""
+              listItem2=""
+              listItem3=""
+              listHeading=""
+              listHeading2=""
+              target=""
+              linkTo=""
+              linkText=""
             />
           </CardLink>
         </CardWrappers>
