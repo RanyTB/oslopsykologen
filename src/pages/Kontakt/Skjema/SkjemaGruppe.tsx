@@ -1,4 +1,10 @@
-import { useForm, Controller } from "react-hook-form";
+import {
+  useForm,
+  Controller,
+  FieldError,
+  FieldErrorsImpl,
+  Merge,
+} from "react-hook-form";
 import Loader from "../../../components/Loader/Loader";
 import { faCircleCheck } from "@fortawesome/free-solid-svg-icons";
 import {
@@ -29,6 +35,25 @@ const GruppeSkjema = () => {
     reset,
     formState: { errors },
   } = useForm();
+
+  const renderErrorMessage = (
+    error:
+      | string
+      | FieldError
+      | Merge<FieldError, FieldErrorsImpl<any>>
+      | undefined
+  ): string | null => {
+    if (!error) return null;
+    if (typeof error === "string") return error;
+    if ("message" in error) {
+      if (typeof error.message === "string") {
+        return error.message;
+      }
+      // Handle other cases if needed
+    }
+    // Handle other cases if needed
+    return null;
+  };
 
   const onSubmit = async (data: unknown) => {
     try {
@@ -63,6 +88,7 @@ const GruppeSkjema = () => {
       setIsLoading(false);
     }
   };
+
   return (
     <FormContainer>
       <h2>Bestill Gruppeterapi</h2>
@@ -97,7 +123,9 @@ const GruppeSkjema = () => {
             </StyledFormSelect>
           )}
         />
-        {errors.grupper && <FormError>{errors.grupper.message}</FormError>}
+        {errors.grupper && (
+          <FormError>{renderErrorMessage(errors.grupper)}</FormError>
+        )}
         <FormLabel htmlFor="navn">Navn *</FormLabel>
         <Controller
           name="navn"
@@ -118,13 +146,15 @@ const GruppeSkjema = () => {
                 name="navn"
                 placeholder="Ditt navn"
               />
-              {errors["navn"]?.type === "required" && (
+              {errors.navn?.type === "required" && (
                 <FormError role="alert">
                   Vennligst fyll inn navnet ditt
                 </FormError>
               )}
-              {errors["navn"]?.message && (
-                <FormError role="alert">{errors["navn"]?.message}</FormError>
+              {errors.navn?.message && (
+                <FormError role="alert">
+                  {renderErrorMessage(errors.navn)}
+                </FormError>
               )}
             </>
           )}
@@ -153,13 +183,15 @@ const GruppeSkjema = () => {
                 name="epost"
                 placeholder="Din e-post"
               />
-              {errors["epost"]?.type === "required" && (
+              {errors.epost?.type === "required" && (
                 <FormError role="alert">
                   Vennligst fyll inn din e-post adresse
                 </FormError>
               )}
-              {errors["epost"]?.message && (
-                <FormError role="alert">{errors["epost"]?.message}</FormError>
+              {errors.epost?.message && (
+                <FormError role="alert">
+                  {renderErrorMessage(errors.epost)}
+                </FormError>
               )}
             </>
           )}
@@ -188,9 +220,10 @@ const GruppeSkjema = () => {
                 name="telefon"
                 placeholder="Ditt telefonnummer"
               />
-
-              {errors["telefon"]?.message && (
-                <FormError role="alert">{errors["telefon"]?.message}</FormError>
+              {errors.telefon?.message && (
+                <FormError role="alert">
+                  {renderErrorMessage(errors.telefon)}
+                </FormError>
               )}
             </>
           )}
@@ -214,8 +247,10 @@ const GruppeSkjema = () => {
           render={({ field }) => (
             <>
               <FormTextarea {...field} placeholder="Maks 1000 tegn" />
-              {errors["message"] && (
-                <FormError role="alert">{errors["message"].message}</FormError>
+              {errors.message && (
+                <FormError role="alert">
+                  {renderErrorMessage(errors.message)}
+                </FormError>
               )}
             </>
           )}
