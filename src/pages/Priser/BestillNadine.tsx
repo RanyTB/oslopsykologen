@@ -11,7 +11,8 @@ const BestillNadine = () => {
         <Image src={heroImage} alt="Image of Psykolog Richani" />
         <Separator />
         <Card
-          title="Bestill konsultasjon hos Nadine Rose A. Richani"
+          secondDescription=""
+          title=""
           description="Jeg legger stor vekt på å skape en trygg, empatisk og ikke-dømmende atmosfære i terapirommet."
           listHeading="Priser:"
           listItem1="Individual terapi 45 min - 1550kr"
@@ -25,7 +26,20 @@ const BestillNadine = () => {
           linkText={"Bestill konsultasjon"}
           target="_blank"
         />
-        <Card linkTo={"/kontakt"} linkText={"Bestill gruppetime"} />
+        <Card
+          title=""
+          description=""
+          secondDescription=""
+          thirdDescription=""
+          listItem1=""
+          listItem2=""
+          listItem3=""
+          listHeading=""
+          listHeading2=""
+          target=""
+          linkTo={"/kontakt"}
+          linkText={"Bestill gruppetime"}
+        />
       </OrderSection>
     </MethodSection>
   );

@@ -9,6 +9,16 @@ const SkriveTerapi = () => {
       <Card
         description="Mange finner skriveterapi like effektivt som samtaleterapi, da det gir mulighet til å utforske tanker og følelser i eget tempo"
         secondDescription="Vi kan kommunisere gjennom e-post, der du sender en tekst, og vi svarer med en tekst tilbake"
+        title=""
+        thirdDescription=""
+        listItem1=""
+        listItem2=""
+        listItem3=""
+        listHeading=""
+        listHeading2=""
+        target=""
+        linkTo=""
+        linkText=""
         linkTo={""}
         linkText={""}
         target=""

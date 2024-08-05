@@ -1,5 +1,4 @@
-import { useForm, Controller } from "react-hook-form";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import GenerellSkjema from "./Skjema/index";
 import GruppeSkjema from "./Skjema/SkjemaGruppe";
 import SkjemaSadiya from "./Skjema/SkjemaSadiya";
@@ -12,7 +11,6 @@ const Kontakt = () => {
   const [kontaktSadiya, setKontaktSadiya] = useState(false);
   const [kontaktNadine, setKontaktNadine] = useState(false);
   const [kontaktGenerell, setKontaktGenerell] = useState(true);
-  const [isSuccess, setIsSuccess] = useState(false);
 
   const handleGruppeTerapiActive = () => {
     setGruppeTerapi(true);
@@ -42,26 +40,6 @@ const Kontakt = () => {
     setKontaktGenerell(true);
   };
 
-  const {
-    control,
-    handleSubmit,
-    reset,
-    formState: { errors },
-  } = useForm();
-
-  const onSubmit = () => {
-    const formData = new FormData();
-    Object.entries(data).forEach(([key, value]) => {
-      formData.append(key, value);
-    });
-    console.log(formData);
-
-    if (isSuccess) {
-      // sendFormData(formData);
-      reset();
-    }
-  };
-
   return (
     <>
       <Section>
@@ -89,33 +67,9 @@ const Kontakt = () => {
           </Nav.Item>
         </StyledNav>
         {kontaktGenerell && <GenerellSkjema />}
-        {gruppeTerapi && (
-          <GruppeSkjema
-            handleSubmit={handleSubmit}
-            onSubmit={onSubmit}
-            control={control}
-            errors={errors}
-            Controller={Controller}
-          />
-        )}
-        {kontaktSadiya && (
-          <SkjemaSadiya
-            handleSubmit={handleSubmit}
-            onSubmit={onSubmit}
-            control={control}
-            errors={errors}
-            Controller={Controller}
-          />
-        )}
-        {kontaktNadine && (
-          <SkjemaNadine
-            handleSubmit={handleSubmit}
-            onSubmit={onSubmit}
-            control={control}
-            errors={errors}
-            Controller={Controller}
-          />
-        )}
+        {gruppeTerapi && <GruppeSkjema />}
+        {kontaktSadiya && <SkjemaSadiya />}
+        {kontaktNadine && <SkjemaNadine />}
       </Section>
     </>
   );
