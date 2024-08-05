@@ -5,8 +5,8 @@ import {
   FieldErrorsImpl,
   Merge,
 } from "react-hook-form";
-import { useState } from "react";
 import Loader from "../../../components/Loader/Loader";
+import { useState } from "react";
 import { faCircleCheck } from "@fortawesome/free-solid-svg-icons";
 import {
   FormError,
@@ -28,12 +28,10 @@ const GenerellSkjema = () => {
     control,
     handleSubmit,
     formState: { errors },
-    reset,
   } = useForm();
-
-  const [isLoading, setIsLoading] = useState(false);
-  const [isError, setIsError] = useState(false);
-  const [isSuccess, setIsSuccess] = useState(false);
+  const [isLoading, setIsLoading] = useState(false); // Example loading state
+  const [isError, setIsError] = useState(false); // Example error state
+  const [isSuccess, setIsSuccess] = useState(false); // Example success state
 
   const renderErrorMessage = (
     error:
@@ -110,7 +108,7 @@ const GenerellSkjema = () => {
                 <FormError role="alert">
                   {errors.navn.type === "required"
                     ? "Vennligst fyll inn navnet ditt"
-                    : renderErrorMessage(errors.navn)}
+                    : renderErrorMessage(errors.navn.message)}
                 </FormError>
               )}
             </>
@@ -140,7 +138,7 @@ const GenerellSkjema = () => {
                 <FormError role="alert">
                   {errors.epost.type === "required"
                     ? "Vennligst fyll inn din e-post adresse"
-                    : renderErrorMessage(errors.epost)}
+                    : renderErrorMessage(errors.epost.message)}
                 </FormError>
               )}
             </>
@@ -170,9 +168,9 @@ const GenerellSkjema = () => {
                 type="tel"
                 placeholder="Ditt telefonnummer"
               />
-              {errors.telefon && (
+              {errors["telefon"]?.message && (
                 <FormError role="alert">
-                  {renderErrorMessage(errors.telefon?.message)}
+                  {renderErrorMessage(errors["telefon"]?.message)}
                 </FormError>
               )}
             </>
@@ -188,11 +186,11 @@ const GenerellSkjema = () => {
             required: "Melding er påkrevd",
             minLength: {
               value: 10,
-              message: "Minimum 10 tegn",
+              message: "Minimum 10 tegn ",
             },
             maxLength: {
               value: 1000,
-              message: "Maks 1000 tegn",
+              message: "Maks 1000 tegn ",
             },
           }}
           render={({ field }) => (
@@ -200,7 +198,7 @@ const GenerellSkjema = () => {
               <FormTextarea {...field} placeholder="Maks 1000 tegn" />
               {errors.message && (
                 <FormError role="alert">
-                  {renderErrorMessage(errors.message)}
+                  {renderErrorMessage(errors.message.message)}
                 </FormError>
               )}
             </>
@@ -225,7 +223,7 @@ const GenerellSkjema = () => {
             <StyledFontAwesomeIcon icon={faCircleCheck} />
             <SubmitMessage>
               Meldingen din er sendt! Vi tar kontakt med deg på den oppgitte
-              eposten i meldingen.
+              eposten i meldingen
             </SubmitMessage>
           </ButtonWrapper>
         )}
