@@ -312,22 +312,6 @@ const MainSection = styled.div`
   }
 `;
 
-const MainHeading = styled.h1`
-  font-size: 2.2rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
-
-  @media (max-width: ${breakpoints.tablet}) {
-    font-size: 2.5rem;
-    word-break: break-word;
-  }
-
-  @media (max-width: ${breakpoints.mobile}) {
-    font-size: 1.5rem;
-    word-break: break-word;
-  }
-`;
-
 const Separator = styled.div`
   width: 49rem;
   border-bottom: 0.2rem solid #d2b48c;
