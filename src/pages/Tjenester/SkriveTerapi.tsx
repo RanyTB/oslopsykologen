@@ -18,10 +18,7 @@ const SkriveTerapi = () => {
         listHeading2=""
         target=""
         linkTo=""
-        linkText=""
-        linkTo={""}
         linkText={""}
-        target=""
       />
       <AccordionContainer>
         <AccordionWrapper>
@@ -64,7 +61,20 @@ const SkriveTerapi = () => {
           </Accordion>
         </AccordionWrapper>
       </AccordionContainer>
-      <Card secondDescription="Maks 1 A4 side per mail - 550kr, opptil 2 ganger i uken" />
+      <Card
+        description=""
+        title=""
+        thirdDescription=""
+        listItem1=""
+        listItem2=""
+        listItem3=""
+        listHeading=""
+        listHeading2=""
+        target=""
+        linkTo=""
+        linkText={""}
+        secondDescription="Maks 1 A4 side per mail - 550kr, opptil 2 ganger i uken"
+      />
       <Separator />
       <Subheading>Vi kommuniserer via Crypho</Subheading>
       <OrderedList>
@@ -74,11 +84,33 @@ const SkriveTerapi = () => {
         <li>Trykk "send"</li>
       </OrderedList>
       <Card
+        description=""
+        secondDescription=""
+        title=""
+        thirdDescription=""
+        listItem1=""
+        listItem2=""
+        listItem3=""
+        listHeading=""
+        listHeading2=""
         linkText="Opprett bruker"
         linkTo="https://app.crypho.com/signup"
         target="_blank"
       />
-      <Card secondDescription="Vent til du får svar før du sender sensitive opplysninger" />
+      <Card
+        description=""
+        title=""
+        thirdDescription=""
+        listItem1=""
+        listItem2=""
+        listItem3=""
+        listHeading=""
+        listHeading2=""
+        secondDescription="Vent til du får svar før du sender sensitive opplysninger"
+        linkText=""
+        linkTo=""
+        target=""
+      />
       <hr />
       <Card
         description="Vi benytter Crypho, en norskutviklet samtaleplatform for sikker kommunikasjon. Crypho kan brukes i nettleser, som app på mobilen, eller som desktop-program på laptopen"
@@ -86,14 +118,60 @@ const SkriveTerapi = () => {
         linkText="Les mer"
         linkTo="https://www.crypho.no/faq/?fbclid=PAZXh0bgNhZW0CMTEAAaZ5XrtK03SQAVYGyBhRFhtTdbn31v3EyyEh4_f7oRMS6w60J_URbas93MY_aem_fw_SaegsG1VrWWeBHU2bGg"
         target="_blank"
+        title=""
+        thirdDescription=""
+        listItem1=""
+        listItem2=""
+        listItem3=""
+        listHeading=""
+        listHeading2=""
       />
-      <Card secondDescription="Vanlig e-post er ikke kryptert, og det bør ikke sendes sensitive personopplysninger" />
+      <Card
+        title=""
+        description=""
+        linkText=""
+        linkTo=""
+        target=""
+        thirdDescription=""
+        listItem1=""
+        listItem2=""
+        listItem3=""
+        listHeading=""
+        listHeading2=""
+        secondDescription="Vanlig e-post er ikke kryptert, og det bør ikke sendes sensitive  personopplysninger"
+      />
       <Separator />
       <Subheading>Dette passer ikke for:</Subheading>
-      <Card description="Alvorlige psykiske lidelser som krever intensiv behandling eller innleggelse, samt akutte krisesituasjoner som selvmordsfare" />
+      <Card
+        title=""
+        secondDescription=""
+        linkText=""
+        linkTo=""
+        target=""
+        thirdDescription=""
+        listItem1=""
+        listItem2=""
+        listItem3=""
+        listHeading=""
+        listHeading2=""
+        description="Alvorlige psykiske lidelser som krever intensiv behandling eller innleggelse, samt akutte krisesituasjoner som selvmordsfare"
+      />
       <Separator />
       <Subheading>Lurer du på noe?</Subheading>
-      <Card linkTo={"/kontakt"} linkText={"Ta kontakt"} />
+      <Card
+        title=""
+        secondDescription=""
+        description=""
+        target=""
+        thirdDescription=""
+        listItem1=""
+        listItem2=""
+        listItem3=""
+        listHeading=""
+        listHeading2=""
+        linkTo={"/kontakt"}
+        linkText={"Ta kontakt"}
+      />
     </MainSection>
   );
 };
