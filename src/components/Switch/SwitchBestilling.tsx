@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styled, { keyframes } from "styled-components";
 import BestillSadiya from "../../pages/Priser/BestillSadiya";
-import BestillNadine from "../../pages/Priser/bestillNadine";
+import BestillNadine from "../../pages/Priser/BestillNadine";
 import Nav from "react-bootstrap/Nav";
 
 const SwitchBestilling = () => {
