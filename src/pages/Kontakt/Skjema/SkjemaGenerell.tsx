@@ -1,10 +1,4 @@
-import {
-  useForm,
-  Controller,
-  FieldError,
-  FieldErrorsImpl,
-  Merge,
-} from "react-hook-form";
+import { useForm, Controller, FieldError, FieldErrorsImpl, Merge } from "react-hook-form";
 import { useState } from "react";
 import Loader from "../../../components/Loader/Loader";
 import { faCircleCheck } from "@fortawesome/free-solid-svg-icons";
@@ -41,7 +35,7 @@ const GenerellSkjema = () => {
       | FieldError
       | Merge<FieldError, FieldErrorsImpl<any>>
       | undefined
-  ): React.ReactNode => {
+  ): string | null => {
     if (!error) return null;
     if (typeof error === "string") return error;
     if ("message" in error && error.message) return error.message;
@@ -170,9 +164,9 @@ const GenerellSkjema = () => {
                 type="tel"
                 placeholder="Ditt telefonnummer"
               />
-              {errors["telefon"]?.message && (
+              {errors.telefon && (
                 <FormError role="alert">
-                  {renderErrorMessage(errors["telefon"]?.message)}
+                  {renderErrorMessage(errors.telefon?.message)}
                 </FormError>
               )}
             </>
@@ -188,11 +182,11 @@ const GenerellSkjema = () => {
             required: "Melding er påkrevd",
             minLength: {
               value: 10,
-              message: "Minimum 10 tegn ",
+              message: "Minimum 10 tegn",
             },
             maxLength: {
               value: 1000,
-              message: "Maks 1000 tegn ",
+              message: "Maks 1000 tegn",
             },
           }}
           render={({ field }) => (
@@ -225,7 +219,7 @@ const GenerellSkjema = () => {
             <StyledFontAwesomeIcon icon={faCircleCheck} />
             <SubmitMessage>
               Meldingen din er sendt! Vi tar kontakt med deg på den oppgitte
-              eposten i meldingen
+              eposten i meldingen.
             </SubmitMessage>
           </ButtonWrapper>
         )}
