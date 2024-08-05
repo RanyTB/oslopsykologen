@@ -1,5 +1,12 @@
 export const colors = {
   background: "#333",
-  link: "#c8133e",
+  primary: "white",
+  link: "#6b60bf",
   linkHover: "#d2395c",
+};
+
+export const breakpoints = {
+  mobile: "480px",
+  tablet: "768px",
+  desktop: "1024px",
 };

@@ -1,7 +1,18 @@
-import Page from "../../components/Page";
+import styled from "styled-components";
+import SwitchBestilling from "../../components/Switch/SwitchBestilling";
 
 const Priser = () => {
-  return <Page title="Priser og bestilling">Info kommer</Page>;
+  return (
+    <>
+      <SwitchContainer>
+        <SwitchBestilling />
+      </SwitchContainer>
+    </>
+  );
 };
+
+const SwitchContainer = styled.div`
+  margin-top: 2rem;
+`;
 
 export default Priser;

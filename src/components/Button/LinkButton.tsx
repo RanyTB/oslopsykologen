@@ -1,33 +1,49 @@
 import { ReactNode } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { colors } from "../../constants";
+
+const LinkColors = {
+  link: "#D2B48C",
+  linkHover: "#C1A375",
+};
 
 type Props = {
   to: string;
+  target: string;
   children: ReactNode;
 };
 
-const LinkButton = ({ to, children }: Props) => {
-  return <StyledLink to={to}>{children}</StyledLink>;
+const LinkButton = ({ to, target, children }: Props) => {
+  return (
+    <StyledLink target={target} to={to}>
+      {children}
+    </StyledLink>
+  );
 };
 
 const StyledLink = styled(Link)`
   display: inline-block;
-  margin: 16px 0px;
+  margin: 16px 0;
   text-decoration: none;
-  background-color: ${colors.link};
-  color: white;
-  padding: 10px 20px;
+  background-color: ${LinkColors.link};
+  color: black;
+  padding: 0.9rem 4rem;
   border: none;
   border-radius: 5px;
-  font-size: 16px;
+  font-size: 1.05rem;
   font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out,
+    background-color 0.5s ease-in-out;
 
   &:hover {
-    background-color: ${colors.linkHover};
+    background-color: ${LinkColors.linkHover};
+    transform: translateY(-2px);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
   }
 `;
 
