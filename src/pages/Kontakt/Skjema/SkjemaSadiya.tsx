@@ -29,7 +29,7 @@ const SkjemaSadiya = () => {
     formState: { errors },
   } = useForm();
 
-  const onSubmit = async (data) => {
+  const onSubmit = async () => {
     try {
       setIsLoading(true);
       setIsError(false);

@@ -80,6 +80,14 @@ const TjenesterPage = () => {
             <Separator />
             <Image src={heroImage} alt="Image of mangfoldpsykologene" />
             <Card
+              secondDescription=""
+              target=""
+              thirdDescription=""
+              listItem1=""
+              listItem2=""
+              listItem3=""
+              listHeading=""
+              listHeading2=""
               title="Bestill konsultasjon hos oss"
               description="Vi legger stor vekt på å skape en trygg, empatisk og ikke-dømmende atmosfære i terapirommet."
               linkTo={"/bestill"}
@@ -111,6 +119,14 @@ const TjenesterPage = () => {
             <Separator />
             <Image src={heroImage} alt="Image of mangfoldpsykologene" />
             <Card
+              secondDescription=""
+              target=""
+              thirdDescription=""
+              listItem1=""
+              listItem2=""
+              listItem3=""
+              listHeading=""
+              listHeading2=""
               title="Bestill Gruppetime hos oss"
               description="Vi legger stor vekt på å skape en trygg, empatisk og ikke-dømmende atmosfære i terapirommet."
               linkTo={"/kontakt"}

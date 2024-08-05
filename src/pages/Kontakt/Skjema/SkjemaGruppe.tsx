@@ -30,7 +30,7 @@ const GruppeSkjema = () => {
     formState: { errors },
   } = useForm();
 
-  const onSubmit = async (data) => {
+  const onSubmit = async (data: unknown) => {
     try {
       setIsLoading(true);
       setIsError(false);
