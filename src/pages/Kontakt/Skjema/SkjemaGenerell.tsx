@@ -43,7 +43,13 @@ const GenerellSkjema = () => {
   ): string | null => {
     if (!error) return null;
     if (typeof error === "string") return error;
-    if ("message" in error && error.message) return error.message;
+    if ("message" in error) {
+      if (typeof error.message === "string") {
+        return error.message;
+      }
+      // Handle other cases if needed
+    }
+    // Handle other cases if needed
     return null;
   };
 
